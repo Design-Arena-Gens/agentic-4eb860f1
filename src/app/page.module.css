@@ -1,0 +1,441 @@
+.page {
+  min-height: 100vh;
+  padding: 64px 32px 120px;
+  display: flex;
+  justify-content: center;
+  background:
+    radial-gradient(120% 120% at 0% 0%, rgba(80, 190, 255, 0.12), transparent 45%),
+    radial-gradient(120% 120% at 100% 0%, rgba(129, 80, 255, 0.16), transparent 50%),
+    radial-gradient(120% 120% at 100% 100%, rgba(255, 109, 221, 0.12), transparent 45%),
+    #020409;
+  color: #e9edf7;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+.main {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: end;
+}
+
+.heroCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.heroPill {
+  display: inline-block;
+  width: fit-content;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(129, 80, 255, 0.12);
+  color: #bbaaff;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.heroCopy h1 {
+  font-size: clamp(2.8rem, 4vw, 3.6rem);
+  line-height: 1.05;
+  font-weight: 650;
+  letter-spacing: -0.04em;
+}
+
+.heroCopy p {
+  color: rgba(233, 237, 247, 0.72);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 36rem;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.primaryAction,
+.secondaryAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  border: 1px solid transparent;
+}
+
+.primaryAction {
+  background: linear-gradient(120deg, #7b5df6, #4fd7ff);
+  color: #050711;
+  box-shadow: 0 12px 32px rgba(79, 215, 255, 0.25);
+}
+
+.secondaryAction {
+  border-color: rgba(233, 237, 247, 0.24);
+  color: rgba(233, 237, 247, 0.86);
+  background: rgba(12, 16, 32, 0.6);
+}
+
+.heroStats {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.statCard {
+  padding: 20px 22px;
+  border-radius: 18px;
+  background: rgba(16, 20, 35, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  backdrop-filter: blur(6px);
+}
+
+.statValue {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: rgba(233, 237, 247, 0.54);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 720px;
+}
+
+.sectionHeader h2 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 620;
+  letter-spacing: -0.03em;
+}
+
+.sectionHeader p {
+  color: rgba(233, 237, 247, 0.66);
+  line-height: 1.65;
+}
+
+.capabilityPanel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+  gap: 28px;
+}
+
+.capabilityMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.capabilityButton {
+  all: unset;
+  cursor: pointer;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: rgba(15, 21, 36, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.18s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.capabilityButton:hover {
+  transform: translateY(-2px);
+  border-color: rgba(126, 109, 255, 0.6);
+}
+
+.capabilityButtonActive {
+  background: linear-gradient(140deg, rgba(123, 93, 246, 0.4), rgba(79, 215, 255, 0.25));
+  border-color: rgba(126, 109, 255, 0.8);
+  box-shadow: 0 20px 40px rgba(123, 93, 246, 0.2);
+}
+
+.capabilityLabel {
+  font-weight: 650;
+  font-size: 1.05rem;
+  color: #ffffff;
+}
+
+.capabilityHeadline {
+  color: rgba(233, 237, 247, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.capabilityContent {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 26px 30px;
+  border-radius: 22px;
+  background: rgba(8, 11, 22, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(123, 93, 246, 0.12);
+}
+
+.capabilityIntro h3 {
+  font-size: 1.6rem;
+  font-weight: 620;
+}
+
+.capabilityIntro p {
+  margin-top: 10px;
+  color: rgba(233, 237, 247, 0.68);
+  line-height: 1.6;
+}
+
+.capabilityList {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+}
+
+.capabilityList li {
+  padding-left: 26px;
+  position: relative;
+  color: rgba(233, 237, 247, 0.78);
+  line-height: 1.55;
+}
+
+.capabilityList li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #7b5df6;
+}
+
+.capabilityPrompt {
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 1px dashed rgba(123, 93, 246, 0.4);
+  background: rgba(123, 93, 246, 0.08);
+  color: rgba(233, 237, 247, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.capabilityPrompt span {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(233, 237, 247, 0.6);
+}
+
+.highlightGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.highlightCard {
+  padding: 24px 22px;
+  border-radius: 20px;
+  background: rgba(13, 17, 30, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.highlightCard h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.highlightCard p {
+  color: rgba(233, 237, 247, 0.68);
+  line-height: 1.5;
+}
+
+.workflowTrack {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.workflowStage {
+  padding: 24px 20px;
+  border-radius: 18px;
+  background: rgba(14, 18, 30, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.workflowTitle {
+  font-weight: 620;
+  color: #91afff;
+  letter-spacing: 0.04em;
+}
+
+.workflowStage p {
+  color: rgba(233, 237, 247, 0.7);
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+.quickWins {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.quickWinCard {
+  padding: 22px 20px;
+  border-radius: 18px;
+  background: rgba(11, 15, 28, 0.76);
+  border: 1px solid rgba(79, 215, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quickWinCard h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.quickWinCard p {
+  color: rgba(233, 237, 247, 0.7);
+  line-height: 1.5;
+}
+
+.finalCta {
+  padding: 44px 42px;
+  border-radius: 28px;
+  background: linear-gradient(130deg, rgba(123, 93, 246, 0.8), rgba(79, 215, 255, 0.8));
+  color: #050711;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.finalCta h2 {
+  font-size: clamp(2.2rem, 3.4vw, 2.8rem);
+  font-weight: 650;
+}
+
+.finalCta p {
+  color: rgba(5, 7, 17, 0.72);
+  max-width: 560px;
+  line-height: 1.55;
+}
+
+.finalCta .primaryAction {
+  background: #050711;
+  color: #e9edf7;
+  box-shadow: none;
+}
+
+.finalCta .primaryAction:hover {
+  background: #101428;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .primaryAction:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 36px rgba(62, 207, 255, 0.28);
+  }
+
+  .secondaryAction:hover {
+    transform: translateY(-2px);
+    background: rgba(18, 24, 44, 0.86);
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .heroStats {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .heroStats .statCard {
+    flex: 1;
+    min-width: 180px;
+  }
+
+  .capabilityPanel {
+    grid-template-columns: 1fr;
+  }
+
+  .highlightGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .workflowTrack {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 48px 20px 80px;
+  }
+
+  .main {
+    gap: 72px;
+  }
+
+  .heroStats {
+    flex-direction: column;
+  }
+
+  .highlightGrid,
+  .workflowTrack,
+  .quickWins {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 540px) {
+  .highlightGrid,
+  .workflowTrack,
+  .quickWins {
+    grid-template-columns: 1fr;
+  }
+
+  .heroCopy h1 {
+    font-size: 2.4rem;
+  }
+
+  .heroCopy p {
+    font-size: 1rem;
+  }
+}
